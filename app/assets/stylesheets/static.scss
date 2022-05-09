@@ -3,19 +3,19 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 body {
-  color: #ff0b3a;
+  color: rgba(2, 108, 252, 1);
   padding-top: 50px;
 }
 
 a {
-  color: #ff0b3a;
-  border-bottom: 2px solid #ff0b3a;
+  color: rgba(2, 108, 252, 1);
+  border-bottom: 2px solid rgba(2, 108, 252, 1);
 }
 
 a:not(.btn):hover, a:focus {
-  color: #ff0b3a;
+  color: rgba(2, 108, 252, 1);
   text-decoration: none;
-  border-bottom: 2px solid #ff0b3a;
+  border-bottom: 2px solid rgba(2, 108, 252, 1);
 }
 
 .navbar a {
@@ -39,7 +39,7 @@ a:not(.btn):hover, a:focus {
 }
 
 .navbar-toggle {
-  background-color: #ff0b3a !important;
+  background-color: rgba(2, 108, 252, 1); !important;
 }
 
 .navbar-toggle .icon-bar {
@@ -47,7 +47,7 @@ a:not(.btn):hover, a:focus {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  border-top: 0.2em solid #ff0b3a;
+  border-top: 0.2em solid rgba(2, 108, 252, 1);
   padding-top: 10px;
 }
 
@@ -63,11 +63,11 @@ h3 {font-size: 2.25em;}
 h4 {font-size: 1.5em;}
 
 .table > thead > tr > th {
-  border-bottom: 2px solid #ff0b3a;
+  border-bottom: 2px solid rgba(2, 108, 252, 1);
 }
 
 .table > thead > tr > th, .table > thead > tr > td, .table > tbody > tr > th, .table > tbody > tr > td, .table > tfoot > tr > th, .table > tfoot > tr > td {
-  border-top: 1px solid #ff0b3a;
+  border-top: 1px solid rgba(2, 108, 252, 1);
   vertical-align: center;
   // padding: 8px 0;
   padding-left: 0;
@@ -81,9 +81,9 @@ table tbody tr td:last-child, table thead tr td:last-child  {
 
 .form-control {
   border-radius: 0 !important;
-  border: 1px solid #ff0b3a;
+  border: 1px solid rgba(2, 108, 252, 1);
   box-shadow: none;
-  color: #ff0b3a;
+  color: rgba(2, 108, 252, 1);
 }
 
 .form-check-box {
@@ -92,14 +92,14 @@ table tbody tr td:last-child, table thead tr td:last-child  {
 
 .btn {
   border-radius: 0 !important;
-  border: 1px solid #ff0b3a;
-  color: #ff0b3a;
+  border: 1px solid rgba(2, 108, 252, 1);
+  color: rgba(2, 108, 252, 1);
   border-color: #ff0b3a !important;
 }
 
 .btn:hover {
   color: #fff;
-  background-color: #ff0b3a;
+  background-color: rgba(2, 108, 252, 1);
   box-shadow: none;
 }
 
@@ -113,19 +113,19 @@ table tbody tr td:last-child, table thead tr td:last-child  {
 }
 
 *:focus {
-  border-color: #ff0b3a !important;
+  border-color: rgba(2, 108, 252, 1); !important;
   box-shadow: none !important;
   outline: none !important;
 }
 
 .dropdown a {
   border: none;
-  color: #ff0b3a !important;
+  color: rgba(2, 108, 252, 1); !important;
 }
 
 .nav .dropdown .dropdown-menu {
   border-radius: 0 !important;
-  border-color: rgba(255,11,58, 0.5);
+  border-color: rgba(0, 2, 146, 1);
 }
 
 .dropdown-menu {
@@ -134,7 +134,7 @@ table tbody tr td:last-child, table thead tr td:last-child  {
 }
 
 .dropdown-menu .divider {
-  background-color: rgba(255,11,58, 0.5);
+  background-color: rgba(0, 2, 146, 1);
 }
 
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
@@ -142,7 +142,7 @@ table tbody tr td:last-child, table thead tr td:last-child  {
 }
 
 .separator {
-  border-color: rgba(255,11,58, 0.5);
+  border-color: rgba(0, 2, 146, 1);
 }
 
 .jumbotron {
