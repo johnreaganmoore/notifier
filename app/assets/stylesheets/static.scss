@@ -113,14 +113,14 @@ table tbody tr td:last-child, table thead tr td:last-child  {
 }
 
 *:focus {
-  border-color: rgba(2, 108, 252, 1); !important;
+  border-color: rgba(2, 108, 252, 1) !important;
   box-shadow: none !important;
   outline: none !important;
 }
 
 .dropdown a {
   border: none;
-  color: rgba(2, 108, 252, 1); !important;
+  color: rgba(2, 108, 252, 1) !important;
 }
 
 .nav .dropdown .dropdown-menu {
