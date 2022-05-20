@@ -10,11 +10,13 @@ namespace :import do
                 url: row['staff-directory'],
             )
 
+            page.user_id ||= User.first.id
             page.css_selector ||= row['selector'] if row['selector'].present?
             page.name ||= row['name'] if row['name'].present?
             page.am_college_id ||= row['am_college_id'] if row['am_college_id'].present?
+            page.exclude_selector ||= "div.sponsors"
 
-            page.save
+            page.save!
         end
     end
   end
