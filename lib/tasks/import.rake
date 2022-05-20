@@ -6,11 +6,15 @@ namespace :import do
     
         ### First create the users for admins
         CSV.foreach(Rails.root.join(urls_file), headers: true) do |row|
-            page = Page.create(
-                name: row['URL'],
-                url: row['URL'],
-                css_selector: "table.sidearm-table"
+            page = Page.where(url: row['staff-directory']).firste_or_create(
+                url: row['staff-directory'],
             )
+
+            page.css_selector ||= row['selector'] if row['selector'].present?
+            page.name ||= row['name'] if row['name'].present?
+            page.am_college_id ||= row['am_college_id'] if row['am_college_id'].present?
+
+            page.save
         end
     end
   end
