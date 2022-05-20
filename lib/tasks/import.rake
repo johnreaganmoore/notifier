@@ -6,7 +6,7 @@ namespace :import do
     
         ### First create the users for admins
         CSV.foreach(Rails.root.join(urls_file), headers: true) do |row|
-            page = Page.where(url: row['staff-directory']).firste_or_create(
+            page = Page.where(url: row['staff-directory']).first_or_create(
                 url: row['staff-directory'],
             )
 
