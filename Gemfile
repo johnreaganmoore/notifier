@@ -1,11 +1,11 @@
 source 'https://rubygems.org'
-ruby '2.7.2'
+ruby '2.7.6'
 
 gem 'rails', '~> 6.0.0'
 gem 'pg', '~> 1.3'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
-gem 'mini_racer', '~> 0.3'
+gem 'mini_racer', '~> 0.6.2'
 
 gem 'dotenv'
 gem 'jquery-rails'
@@ -15,7 +15,7 @@ gem 'coffee-rails'
 gem 'sdoc', '~> 2.3.1', group: :doc
 
 gem 'rack-cache'
-gem 'bcrypt', '~> 3.1.17'
+gem 'bcrypt', '~> 3.1.18'
 gem 'puma', '~> 5.6'
 gem 'rails_12factor'
 
@@ -42,7 +42,7 @@ end
 group :test do
   gem 'webmock'
   gem 'rails-controller-testing'
-  gem 'rspec_junit_formatter'
+  gem 'rspec-github', require: false
   gem 'codeclimate-test-reporter', require: nil
 end
 
