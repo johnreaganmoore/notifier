@@ -10,6 +10,7 @@ namespace :import do
                 url: row['staff-directory'],
             )
 
+            page.url ||= row['staff-directory']
             page.user_id ||= User.first.id
             page.css_selector ||= row['selector'] if row['selector'].present?
             page.name ||= row['name'] if row['name'].present?
