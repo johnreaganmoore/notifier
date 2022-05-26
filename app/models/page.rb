@@ -27,9 +27,27 @@ class Page < ApplicationRecord
 
     @html ||= begin
       logger.info "downloading url=#{self.url} for page.id=#{self.id}"
-      dirty = Net::HTTP.get(URI(self.url.to_s))
-      SafeString.coerce(dirty)
+
+      html_string = ""
+
+      browser = Watir::Browser.new   
+      browser.wait(60)   
+      browser.goto(self.url)
+      browser.links.each do |link|
+        if link.attribute_list.include?(:href) && link.href.include?("mailto")
+          email = link.href
+          email.slice!("mailto:")
+          doc = Nokogiri::HTML::DocumentFragment.parse(link.parent.parent.inner_html)
+
+          doc.at('script').remove if doc.at('script').present?
+          doc.at('img').remove if doc.at('img').present?
+          html_string += doc.to_html
+        end
+      end
+    
+      SafeString.coerce(html_string)
     end
+
   end
 
   def document

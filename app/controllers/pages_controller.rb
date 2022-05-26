@@ -58,6 +58,8 @@ class PagesController < ApplicationController
 
   # PATCH/PUT /pages/1
   def update
+    @users = User.all
+    @slack_integrations = SlackIntegration.all
     if @page.update(page_params)
       redirect_to pages_url, notice: 'Page was successfully updated.'
     else

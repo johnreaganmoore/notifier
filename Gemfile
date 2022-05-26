@@ -25,6 +25,7 @@ gem 'jwt'
 gem 'premailer-rails'
 gem 'httparty'
 
+gem 'watir'
 gem 'diffy'
 gem 'kramdown'
 
