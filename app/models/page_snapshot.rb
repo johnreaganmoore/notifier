@@ -14,6 +14,8 @@ class PageSnapshot < ApplicationRecord
   def match_text
     @match = self.page.html
 
+    p @match
+
     if self.page.exclude_selector.present?
       # Set the content of the exclude selector to the empty string
       @match.css(self.page.exclude_selector.strip).each do |node|
